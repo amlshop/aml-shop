@@ -735,6 +735,93 @@
       .review-card { padding: 1.1rem; }
     }
 
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .lightbox img {
+      max-width: 520px;
+      max-height: 600px;
+      width: 90vw;
+      object-fit: contain;
+      border-radius: 4px;
+      transform: scale(0.85);
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .lightbox.open img { transform: scale(1); }
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem; right: 1.5rem;
+      background: none; border: none;
+      color: white; font-size: 2rem;
+      cursor: pointer; opacity: 0.7;
+      transition: opacity 0.2s, transform 0.2s;
+      line-height: 1;
+    }
+    .lightbox-close:hover { opacity: 1; transform: rotate(90deg); }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      border: none; color: white;
+      width: 44px; height: 44px;
+      border-radius: 50%; font-size: 1.4rem;
+      cursor: pointer; transition: background 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+    .lightbox-nav.prev { left: 1rem; }
+    .lightbox-nav.next { right: 1rem; }
+    .lightbox-counter {
+      position: absolute;
+      bottom: 1.2rem; left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.6);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── SECTION PROGRESS ── */
+    .scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rose-dark), var(--rose-hot));
+      z-index: 200;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* ── SECTION FADE ENHANCED ── */
+    .section-fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .section-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Cursor pointer on carousel images */
+    .carousel-slide img { cursor: zoom-in; }
+
     /* ── SCROLL ANIMATIONS ── */
     .fade-in {
       opacity: 0;
@@ -1199,6 +1286,18 @@
   <p class="footer-copy">© 2026 AML Shop · Tous droits réservés</p>
 </footer>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lb-close">✕</button>
+  <button class="lightbox-nav prev" id="lb-prev">&#8249;</button>
+  <img src="" id="lb-img" alt="">
+  <button class="lightbox-nav next" id="lb-next">&#8250;</button>
+  <div class="lightbox-counter" id="lb-counter"></div>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
 <script>
   const orderForm = document.getElementById('order-form');
   const submitBtn = document.getElementById('submit-btn');
@@ -1383,6 +1482,10 @@
         ph.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.2" stroke="var(--rose)"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>📸 sac${sac}-${i}.jpg`;
         slide.appendChild(ph);
       };
+      img.addEventListener('click', () => {
+        const allImgs = Array.from(track.querySelectorAll('img')).filter(i => i.style.display !== 'none' && i.complete && i.naturalWidth > 0).map(i => i.src);
+        if (allImgs.length > 0) openLightbox(allImgs, Math.min(current, allImgs.length - 1));
+      });
       slide.appendChild(img);
       track.appendChild(slide);
 
@@ -1482,6 +1585,55 @@
     return 'AML-' + date + '-' + rand;
   }
   document.getElementById('numero_commande').value = genOrderNum();
+
+  // ── SCROLL PROGRESS ──
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrolled / total * 100) + '%';
+  });
+
+  // ── LIGHTBOX ──
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbClose = document.getElementById('lb-close');
+  const lbPrev = document.getElementById('lb-prev');
+  const lbNext = document.getElementById('lb-next');
+  const lbCounter = document.getElementById('lb-counter');
+  let lbImages = [];
+  let lbIndex = 0;
+
+  function openLightbox(images, index) {
+    lbImages = images;
+    lbIndex = index;
+    lbImg.src = lbImages[lbIndex];
+    lbCounter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function lbGoTo(dir) {
+    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+    lbImg.src = lbImages[lbIndex];
+    lbCounter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  lbPrev.addEventListener('click', () => lbGoTo(-1));
+  lbNext.addEventListener('click', () => lbGoTo(1));
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbGoTo(-1);
+    if (e.key === 'ArrowRight') lbGoTo(1);
+  });
 
   // ── FAQ ──
   document.querySelectorAll('.faq-question').forEach(btn => {
