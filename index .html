@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AML Shop — Mini Sac Bandoulière Rowan | Maroquinerie</title>
+  <meta name="description" content="Découvrez AML Shop, votre boutique de maroquinerie tendance. Mini sac bandoulière Rowan disponible en 6 couleurs à 34,99€. Livraison France. Commandez facilement !">
+  <meta property="og:title" content="AML Shop — Mini Sac Bandoulière Rowan">
+  <meta property="og:description" content="6 coloris tendance à 34,99€. Commandez facilement, paiement PayPal.">
+  <meta name="theme-color" content="#8c3356">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink-pale: #fdf0f5;
+      --pink-light: #f5d5e5;
+      --pink-mid: #e8a0be;
+      --rose: #c0527a;
+      --rose-dark: #8c3356;
+      --rose-hot: #e8357a;
+      --text: #3a1a28;
+      --text-muted: #8a6070;
+      --white: #fff9fb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 240, 245, 0.96);
+      backdrop-filter: blur(12px);
+      padding: 0.9rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--pink-light);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nav-brand {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: var(--rose-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--rose-hot); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(160deg, var(--pink-pale) 0%, var(--white) 60%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-blob-1 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: var(--pink-light);
+      opacity: 0.5;
+      top: -120px;
+      right: -180px;
+      pointer-events: none;
+    }
+
+    .hero-blob-2 {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: var(--pink-light);
+      opacity: 0.35;
+      bottom: -100px;
+      left: -120px;
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 50px rgba(192, 82, 122, 0.22);
+      position: relative;
+      z-index: 1;
+      animation: floatIn 0.8s ease both;
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-text { position: relative; z-index: 1; animation: floatIn 0.9s 0.15s ease both; }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 300;
+      color: var(--rose-dark);
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+
+    .hero h1 .script {
+      font-family: 'Dancing Script', cursive;
+      color: var(--rose-hot);
+      font-size: 0.65em;
+      display: block;
+      margin-top: 0.2em;
+    }
+
+    .hero-tagline {
+      margin-top: 1.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+      animation: floatIn 1s 0.3s ease both;
+    }
+
+    .btn-primary {
+      background: var(--rose-dark);
+      color: white;
+      padding: 1rem 2.5rem;
+      border: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    .btn-primary:hover { background: var(--rose-hot); transform: translateY(-3px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--rose-dark);
+      padding: 1rem 2.5rem;
+      border: 1px solid var(--rose-dark);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s;
+    }
+
+    .btn-outline:hover { background: var(--rose-dark); color: white; transform: translateY(-3px); }
+
+    /* ── PRODUCTS ── */
+    .products {
+      padding: 7rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--rose-hot);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 400;
+      color: var(--rose-dark);
+      letter-spacing: -0.01em;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--pink-light);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 24px 60px rgba(192, 82, 122, 0.14);
+    }
+
+    /* ── CAROUSEL ── */
+    .carousel {
+      position: relative;
+      height: 320px;
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--pink-pale), var(--pink-light));
+    }
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.4s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-slide .product-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: linear-gradient(145deg, var(--pink-pale), var(--pink-light));
+    }
+
+    .carousel-slide .product-placeholder svg {
+      width: 40px;
+      height: 40px;
+      opacity: 0.45;
+      stroke: var(--rose);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.85);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: background 0.2s;
+      color: var(--rose-dark);
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .carousel-btn:hover { background: white; }
+    .carousel-btn.prev { left: 8px; }
+    .carousel-btn.next { right: 8px; }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+      z-index: 2;
+    }
+
+    .carousel-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.6);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+    }
+
+    .carousel-dot.active {
+      background: white;
+      transform: scale(1.3);
+    }
+
+    /* ── PRODUCT INFO ── */
+    .product-info { padding: 1.5rem 1.75rem; }
+
+    .product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: var(--rose-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .product-desc-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .product-desc-list li {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      padding: 0.2rem 0 0.2rem 1rem;
+      position: relative;
+    }
+
+    .product-desc-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--rose-hot);
+      font-weight: bold;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--rose-hot);
+      font-weight: 500;
+    }
+
+    .btn-order {
+      background: var(--rose-dark);
+      color: white;
+      border: none;
+      padding: 0.65rem 1.4rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-order:hover { background: var(--rose-hot); }
+
+    /* ── ORDER FORM ── */
+    .order-section {
+      background: var(--pink-pale);
+      padding: 7rem 2rem;
+    }
+
+    .order-container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .order-form {
+      background: white;
+      padding: 3rem 3.5rem;
+      border: 1px solid var(--pink-light);
+      margin-top: 3rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group { margin-bottom: 1.5rem; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--pink-light);
+      background: var(--pink-pale);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--rose); }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-submit {
+      width: 100%;
+      background: #ccc;
+      color: #999;
+      border: none;
+      padding: 1.1rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: not-allowed;
+      transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .form-submit.ready {
+      background: var(--rose-dark);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(140,51,86,0.35);
+    }
+
+    .form-submit.ready:hover {
+      background: var(--rose-hot);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232,53,122,0.4);
+    }
+
+    .payment-info {
+      margin-top: 1.5rem;
+      padding: 1.1rem 1.25rem;
+      background: var(--pink-pale);
+      border-left: 3px solid var(--rose-hot);
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .payment-info strong { color: var(--rose-dark); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--rose-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-sub {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.75rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: white; }
+
+    .footer-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+      margin: 0 auto 1.5rem;
+    }
+
+    .footer-copy {
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+
+    /* ── VALIDATION ── */
+    .form-group input.invalid { border-color: #e8357a; }
+    .form-group input.valid { border-color: #4caf7d; }
+    .field-error {
+      font-size: 0.75rem;
+      color: var(--rose-hot);
+      margin-top: 0.3rem;
+      display: none;
+    }
+    .field-error.show { display: block; }
+
+    /* ── AUTOCOMPLETE ── */
+    .autocomplete-wrapper { position: relative; }
+    .autocomplete-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid var(--pink-light);
+      border-top: none;
+      z-index: 50;
+      max-height: 200px;
+      overflow-y: auto;
+      box-shadow: 0 8px 24px rgba(140,51,86,0.1);
+    }
+    .autocomplete-item {
+      padding: 0.7rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text);
+      cursor: pointer;
+      border-bottom: 1px solid var(--pink-pale);
+      transition: background 0.15s;
+    }
+    .autocomplete-item:hover { background: var(--pink-pale); color: var(--rose-dark); }
+    .autocomplete-item strong { color: var(--rose-dark); }
+
+
+
+
+    /* ── PHONE COMBO ── */
+    .phone-combo {
+      display: flex;
+      gap: 0;
+    }
+    .phone-combo select {
+      width: auto;
+      min-width: 130px;
+      border-right: none;
+      border-radius: 0;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .phone-combo input {
+      flex: 1;
+      border-radius: 0;
+    }
+
+    /* ── WHATSAPP FLOTTANT ── */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      background: #25D366;
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+    }
+    .whatsapp-btn svg { width: 28px; height: 28px; fill: white; }
+
+    /* ── BADGE RUPTURE ── */
+    .product-card[data-out="true"] { position: relative; }
+    .product-card[data-out="true"]::after {
+      content: 'Rupture de stock';
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(58,26,40,0.85);
+      color: white;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      z-index: 3;
+    }
+    .product-card[data-out="true"] .btn-order {
+      opacity: 0.4;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    /* ── AVIS CLIENTS ── */
+    .reviews {
+      background: var(--pink-pale);
+      padding: 6rem 2rem;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 3rem auto 0;
+    }
+    .review-card {
+      background: white;
+      border: 1px solid var(--pink-light);
+      padding: 1.75rem;
+    }
+    .review-stars { color: var(--rose-hot); font-size: 1rem; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+    .review-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+    .review-author { font-size: 0.8rem; font-weight: 500; color: var(--rose-dark); letter-spacing: 0.05em; }
+    .review-date { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    /* ── FAQ ── */
+    .faq { padding: 6rem 2rem; max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--pink-light); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 1.25rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--rose-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq-question:hover { color: var(--rose-hot); }
+    .faq-icon { font-size: 1.4rem; transition: transform 0.3s; flex-shrink: 0; color: var(--rose-hot); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.25rem; }
+
+    @media (max-width: 768px) {
+      .reviews-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .review-card { padding: 1.1rem; }
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      nav { padding: 0.8rem 1.25rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .order-form { padding: 2rem 1.5rem; }
+      .hero-cta { flex-direction: column; align-items: center; }
+      .products { padding: 5rem 0.75rem; }
+      .order-section { padding: 5rem 1.25rem; }
+      .products-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .carousel { height: 200px; }
+      .product-info { padding: 0.85rem; }
+      .product-name { font-size: 1rem; }
+      .product-desc-list { display: none; }
+      .product-price { font-size: 1.2rem; }
+      .btn-order { padding: 0.5rem 0.85rem; font-size: 0.7rem; }
+      .carousel-btn { width: 24px; height: 24px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="logo aml shop.jpg" alt="AML Shop">
+    <span class="nav-brand">AML Shop</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sacs">Nos Sacs</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#commander">Commander</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob-1"></div>
+  <div class="hero-blob-2"></div>
+  <img src="logo aml shop.jpg" alt="AML Shop" class="hero-logo">
+  <div class="hero-text">
+    <h1>AML<span class="script">shop</span></h1>
+    <p class="hero-tagline">Élégance &amp; Style · Maroquinerie</p>
+  </div>
+  <div class="hero-cta">
+    <a href="#sacs" class="btn-primary">Découvrir la collection</a>
+    <a href="#commander" class="btn-outline">Commander</a>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="sacs">
+  <div class="section-header fade-in">
+    <p class="section-label">Notre sélection</p>
+    <h2 class="section-title">Nos Sacs</h2>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- Sac 1 — Noir -->
+    <div class="product-card">
+      <div class="carousel" data-sac="1" data-total="5">
+        <div class="carousel-track"></div>
+        <button class="carousel-btn prev">&#8249;</button>
+        <button class="carousel-btn next">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Mini sac bandoulière Rowan — Noir</h3>
+        <ul class="product-desc-list">
+          <li>Toile enduite imprimée de l'emblématique logo Coach</li>
+          <li>Bordure partiellement fabriquée avec une couche de fibres de cuir recyclé</li>
+          <li>Deux emplacements pour cartes de crédit</li>
+          <li>Fermeture éclair sur le dessus, doublure en tissu</li>
+          <li>Bandoulière amovible, pour porter le sac à l'épaule ou croisé</li>
+        </ul>
+        <div class="product-footer">
+          <span class="product-price">34,99 €</span>
+          <a href="#commander" class="btn-order">Commander</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sac 2 — Bleu -->
+    <div class="product-card">
+      <div class="carousel" data-sac="2" data-total="5">
+        <div class="carousel-track"></div>
+        <button class="carousel-btn prev">&#8249;</button>
+        <button class="carousel-btn next">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Mini sac bandoulière Rowan — Bleu</h3>
+        <ul class="product-desc-list">
+          <li>Toile enduite imprimée de l'emblématique logo Coach</li>
+          <li>Bordure partiellement fabriquée avec une couche de fibres de cuir recyclé</li>
+          <li>Deux emplacements pour cartes de crédit</li>
+          <li>Fermeture éclair sur le dessus, doublure en tissu</li>
+          <li>Bandoulière amovible, pour porter le sac à l'épaule ou croisé</li>
+        </ul>
+        <div class="product-footer">
+          <span class="product-price">34,99 €</span>
+          <a href="#commander" class="btn-order">Commander</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sac 3 — Rose -->
+    <div class="product-card">
+      <div class="carousel" data-sac="3" data-total="5">
+        <div class="carousel-track"></div>
+        <button class="carousel-btn prev">&#8249;</button>
+        <button class="carousel-btn next">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Mini sac bandoulière Rowan — Rose</h3>
+        <ul class="product-desc-list">
+          <li>Toile enduite imprimée de l'emblématique logo Coach</li>
+          <li>Bordure partiellement fabriquée avec une couche de fibres de cuir recyclé</li>
+          <li>Deux emplacements pour cartes de crédit</li>
+          <li>Fermeture éclair sur le dessus, doublure en tissu</li>
+          <li>Bandoulière amovible, pour porter le sac à l'épaule ou croisé</li>
+        </ul>
+        <div class="product-footer">
+          <span class="product-price">34,99 €</span>
+          <a href="#commander" class="btn-order">Commander</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sac 4 — Marron -->
+    <div class="product-card">
+      <div class="carousel" data-sac="4" data-total="5">
+        <div class="carousel-track"></div>
+        <button class="carousel-btn prev">&#8249;</button>
+        <button class="carousel-btn next">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Mini sac bandoulière Rowan — Marron</h3>
+        <ul class="product-desc-list">
+          <li>Toile enduite imprimée de l'emblématique logo Coach</li>
+          <li>Bordure partiellement fabriquée avec une couche de fibres de cuir recyclé</li>
+          <li>Deux emplacements pour cartes de crédit</li>
+          <li>Fermeture éclair sur le dessus, doublure en tissu</li>
+          <li>Bandoulière amovible, pour porter le sac à l'épaule ou croisé</li>
+        </ul>
+        <div class="product-footer">
+          <span class="product-price">34,99 €</span>
+          <a href="#commander" class="btn-order">Commander</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sac 5 — Beige -->
+    <div class="product-card">
+      <div class="carousel" data-sac="5" data-total="5">
+        <div class="carousel-track"></div>
+        <button class="carousel-btn prev">&#8249;</button>
+        <button class="carousel-btn next">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Mini sac bandoulière Rowan — Beige</h3>
+        <ul class="product-desc-list">
+          <li>Toile enduite imprimée de l'emblématique logo Coach</li>
+          <li>Bordure partiellement fabriquée avec une couche de fibres de cuir recyclé</li>
+          <li>Deux emplacements pour cartes de crédit</li>
+          <li>Fermeture éclair sur le dessus, doublure en tissu</li>
+          <li>Bandoulière amovible, pour porter le sac à l'épaule ou croisé</li>
+        </ul>
+        <div class="product-footer">
+          <span class="product-price">34,99 €</span>
+          <a href="#commander" class="btn-order">Commander</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sac 6 — Bleu Jean -->
+    <div class="product-card">
+      <div class="carousel" data-sac="6" data-total="5">
+        <div class="carousel-track"></div>
+        <button class="carousel-btn prev">&#8249;</button>
+        <button class="carousel-btn next">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Mini sac bandoulière Rowan — Bleu Jean</h3>
+        <ul class="product-desc-list">
+          <li>Toile enduite imprimée de l'emblématique logo Coach</li>
+          <li>Bordure partiellement fabriquée avec une couche de fibres de cuir recyclé</li>
+          <li>Deux emplacements pour cartes de crédit</li>
+          <li>Fermeture éclair sur le dessus, doublure en tissu</li>
+          <li>Bandoulière amovible, pour porter le sac à l'épaule ou croisé</li>
+        </ul>
+        <div class="product-footer">
+          <span class="product-price">34,99 €</span>
+          <a href="#commander" class="btn-order">Commander</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section class="reviews" id="avis">
+  <div class="section-header fade-in">
+    <p class="section-label">Ce qu'elles en pensent</p>
+    <h2 class="section-title">Avis Clients</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-in">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Sac reçu en quelques jours, exactement comme sur les photos. La qualité est vraiment au rendez-vous pour ce prix. Je recommande !"</p>
+      <div class="review-author">Inès M.</div>
+      <div class="review-date">Paris · Avril 2026</div>
+    </div>
+    <div class="review-card fade-in">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"J'ai pris le coloris rose et il est magnifique ! Le vendeur a été très réactif sur Snap. Super expérience, je reviendrai."</p>
+      <div class="review-author">Chloé D.</div>
+      <div class="review-date">Lyon · Mars 2026</div>
+    </div>
+    <div class="review-card fade-in">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Très joli sac, bandoulière bien pratique. Le paiement par PayPal c'est rassurant. Livraison un peu longue mais ça valait l'attente."</p>
+      <div class="review-author">Fatou K.</div>
+      <div class="review-date">Bordeaux · Avril 2026</div>
+    </div>
+    <div class="review-card fade-in">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Le sac noir est parfait pour tous les jours. Très classe, plusieurs compliments reçus. Commande fluide et contact sympa !"</p>
+      <div class="review-author">Léa T.</div>
+      <div class="review-date">Marseille · Mai 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="order-section" id="commander">
+  <div class="order-container">
+    <div class="section-header fade-in">
+      <p class="section-label">Passer une commande</p>
+      <h2 class="section-title">Commander</h2>
+    </div>
+
+    <form class="order-form fade-in" id="order-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="804520a1-6af0-4d9e-8cfa-9e25a0087876">
+      <input type="hidden" name="numero_commande" id="numero_commande">
+      <input type="hidden" name="subject" id="email-subject" value="Nouvelle commande AML Shop 🎀">
+      <input type="hidden" name="from_name" value="AML Shop">
+      <input type="checkbox" name="botcheck" style="display:none">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="prenom">Prénom *</label>
+          <input type="text" id="prenom" name="prenom" placeholder="Louise" required>
+        </div>
+        <div class="form-group">
+          <label for="nom">Nom *</label>
+          <input type="text" id="nom" name="nom" placeholder="Dupont" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse e-mail *</label>
+        <input type="email" id="email" name="email" placeholder="louise@exemple.fr" required>
+        <span class="field-error" id="email-error">Adresse e-mail invalide</span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Téléphone *</label>
+          <div class="phone-combo">
+            <select name="indicatif" id="indicatif" required>
+              <option value="+33">🇫🇷 France +33</option>
+              <option value="+32">🇧🇪 Belgique +32</option>
+              <option value="+41">🇨🇭 Suisse +41</option>
+              <option value="+352">🇱🇺 Luxembourg +352</option>
+              <option value="+44">🇬🇧 Royaume-Uni +44</option>
+              <option value="+49">🇩🇪 Allemagne +49</option>
+              <option value="+34">🇪🇸 Espagne +34</option>
+              <option value="+39">🇮🇹 Italie +39</option>
+              <option value="+351">🇵🇹 Portugal +351</option>
+              <option value="+31">🇳🇱 Pays-Bas +31</option>
+              <option value="+43">🇦🇹 Autriche +43</option>
+              <option value="+45">🇩🇰 Danemark +45</option>
+              <option value="+46">🇸🇪 Suède +46</option>
+              <option value="+47">🇳🇴 Norvège +47</option>
+              <option value="+358">🇫🇮 Finlande +358</option>
+              <option value="+353">🇮🇪 Irlande +353</option>
+              <option value="+30">🇬🇷 Grèce +30</option>
+              <option value="+48">🇵🇱 Pologne +48</option>
+              <option value="+420">🇨🇿 Tchéquie +420</option>
+              <option value="+36">🇭🇺 Hongrie +36</option>
+              <option value="+40">🇷🇴 Roumanie +40</option>
+              <option value="+359">🇧🇬 Bulgarie +359</option>
+              <option value="+385">🇭🇷 Croatie +385</option>
+              <option value="+386">🇸🇮 Slovénie +386</option>
+              <option value="+421">🇸🇰 Slovaquie +421</option>
+              <option value="+370">🇱🇹 Lituanie +370</option>
+              <option value="+371">🇱🇻 Lettonie +371</option>
+              <option value="+372">🇪🇪 Estonie +372</option>
+              <option value="+356">🇲🇹 Malte +356</option>
+              <option value="+357">🇨🇾 Chypre +357</option>
+              <option value="+382">🇲🇪 Monténégro +382</option>
+              <option value="+381">🇷🇸 Serbie +381</option>
+              <option value="+387">🇧🇦 Bosnie +387</option>
+              <option value="+355">🇦🇱 Albanie +355</option>
+              <option value="+389">🇲🇰 Macédoine +389</option>
+              <option value="+1">🇺🇸 États-Unis +1</option>
+              <option value="+1-CA">🇨🇦 Canada +1</option>
+              <option value="+228">🇹🇬 Togo +228</option>
+              <option value="autre">✏️ Autre...</option>
+            </select>
+            <input type="tel" id="phone" name="telephone" placeholder="06 12 34 56 78" required>
+          </div>
+          <div id="custom-indicatif-wrap" style="display:none; margin-top:0.5rem;">
+            <input type="text" id="custom-indicatif" name="indicatif_custom" placeholder="Ex: +855 (Cambodge)">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="snap">Snapchat *</label>
+          <input type="text" id="snap" name="snapchat" placeholder="ton.pseudo.snap" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adresse">Adresse de livraison *</label>
+        <div class="autocomplete-wrapper">
+          <input type="text" id="adresse" name="adresse" placeholder="12 rue des Fleurs" required autocomplete="off">
+          <div class="autocomplete-list" id="adresse-list" style="display:none"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cp">Code postal *</label>
+          <input type="text" id="cp" name="code_postal" placeholder="75001" required>
+        </div>
+        <div class="form-group">
+          <label for="ville">Ville *</label>
+          <input type="text" id="ville" name="ville" placeholder="Paris" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="produit">Sac souhaité *</label>
+          <select id="produit" name="produit" required>
+            <option value="">— Choisir un sac —</option>
+            <option value="Rowan Noir">Mini sac bandoulière Rowan — Noir</option>
+            <option value="Rowan Bleu">Mini sac bandoulière Rowan — Bleu</option>
+            <option value="Rowan Rose">Mini sac bandoulière Rowan — Rose</option>
+            <option value="Rowan Marron">Mini sac bandoulière Rowan — Marron</option>
+            <option value="Rowan Beige">Mini sac bandoulière Rowan — Beige</option>
+            <option value="Rowan Bleu Jean">Mini sac bandoulière Rowan — Bleu Jean</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantite">Quantité *</label>
+          <select id="quantite" name="quantite" required>
+            <option value="">—</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group" id="total-wrap" style="display:none;">
+        <div style="background:var(--pink-pale);border:1px solid var(--pink-light);padding:0.9rem 1rem;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:0.8rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;">Total estimé</span>
+          <span id="total-display" style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--rose-hot);font-weight:500;"></span>
+        </div>
+        <input type="hidden" id="total-hidden" name="total">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message (optionnel)</label>
+        <textarea id="message" name="message" placeholder="Réseau social préféré, questions..."></textarea>
+      </div>
+
+
+      <button type="submit" class="form-submit" id="submit-btn" disabled>Envoyer ma commande</button>
+
+      <div class="payment-info">
+        <strong>📦 Comment ça marche ?</strong><br>
+        Après réception de votre commande, nous vous recontacterons sur Snapchat (<strong>stany75o</strong>) ou via le réseau social que vous utilisez le plus — pensez à le mentionner dans le champ message. Le paiement s'effectue par <strong>PayPal</strong>. Délai de livraison variable selon le transporteur et votre position géographique.
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background: var(--white);">
+  <div class="faq fade-in">
+    <div class="section-header" style="margin-bottom:2rem;">
+      <p class="section-label">Vos questions</p>
+      <h2 class="section-title">FAQ</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Comment passer une commande ?<span class="faq-icon">+</span></button>
+      <div class="faq-answer">Remplissez le formulaire de commande avec vos informations et choisissez votre sac. On vous recontacte ensuite sur Snapchat (stany75o) pour finaliser la commande et le paiement.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Quel est le moyen de paiement ?<span class="faq-icon">+</span></button>
+      <div class="faq-answer">Le paiement s'effectue uniquement par PayPal. Vous recevrez les instructions de paiement après confirmation de votre commande via Snapchat.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Quels sont les délais de livraison ?<span class="faq-icon">+</span></button>
+      <div class="faq-answer">Les délais varient selon le transporteur et votre position géographique. Comptez généralement entre 3 et 10 jours ouvrés après confirmation du paiement.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Puis-je retourner un article ?<span class="faq-icon">+</span></button>
+      <div class="faq-answer">En cas de problème avec votre commande, contactez-nous directement sur Snapchat (stany75o) ou Instagram (stvnys_law). Nous trouverons une solution ensemble.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Livrez-vous en dehors de France ?<span class="faq-icon">+</span></button>
+      <div class="faq-answer">Pour le moment nous livrons principalement en France métropolitaine. Contactez-nous sur Snap pour toute demande de livraison internationale.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOTTANT -->
+<!-- Remplace 33600000000 par ton numéro ex: 33612345678 -->
+<a href="https://wa.me/33600000000?text=Bonjour%20AML%20Shop%20!" class="whatsapp-btn" target="_blank" title="Nous contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-logo">AML shop</div>
+  <p class="footer-sub">Maroquinerie · Élégance &amp; Style</p>
+  <div class="footer-links">
+    <a href="#sacs">Nos Sacs</a>
+    <a href="#commander">Commander</a>
+    <a href="https://instagram.com/stvnys_law" target="_blank">Instagram</a>
+    <a href="https://snapchat.com/add/stany75o" target="_blank">Snapchat</a>
+    <a href="https://tiktok.com/@stanyslaw_75o" target="_blank">TikTok</a>
+  </div>
+  <div class="footer-divider"></div>
+  <p class="footer-copy">© 2026 AML Shop · Tous droits réservés</p>
+</footer>
+
+<script>
+  const orderForm = document.getElementById('order-form');
+  const submitBtn = document.getElementById('submit-btn');
+
+  orderForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.textContent = 'Envoi en cours...';
+    submitBtn.disabled = true;
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(orderForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      const data = await res.json();
+      if (data.success) {
+        window.location.href = 'merci.html';
+      } else {
+        submitBtn.textContent = 'Envoyer ma commande';
+        submitBtn.classList.add('ready');
+        submitBtn.disabled = false;
+        alert('Une erreur est survenue, veuillez réessayer.');
+      }
+    } catch(err) {
+      submitBtn.textContent = 'Envoyer ma commande';
+      submitBtn.classList.add('ready');
+      submitBtn.disabled = false;
+      alert('Pas de connexion internet, veuillez réessayer.');
+    }
+  });
+
+  // ── BUTTON STATE ──
+  const requiredFields = orderForm.querySelectorAll('input[required], select[required], textarea[required]');
+
+  function checkFormReady() {
+    let allFilled = true;
+
+    requiredFields.forEach(field => {
+      if (!field.value.trim()) allFilled = false;
+    });
+
+    // Also check email is valid
+    const emailVal = emailInput.value.trim();
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailVal) && !suggestDomain(emailVal);
+
+    if (allFilled && emailOk) {
+      submitBtn.disabled = false;
+      submitBtn.classList.add('ready');
+    } else {
+      submitBtn.disabled = true;
+      submitBtn.classList.remove('ready');
+    }
+  }
+
+  requiredFields.forEach(field => {
+    field.addEventListener('input', checkFormReady);
+    field.addEventListener('change', checkFormReady);
+  });
+
+  // ── EMAIL VALIDATION ──
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
+
+  const knownDomains = ['gmail.com','yahoo.fr','yahoo.com','hotmail.com','hotmail.fr',
+    'outlook.com','outlook.fr','icloud.com','live.fr','live.com','orange.fr','sfr.fr',
+    'free.fr','laposte.net','wanadoo.fr','bbox.fr'];
+
+  function suggestDomain(email) {
+    const atIdx = email.lastIndexOf('@');
+    if (atIdx === -1) return null;
+    const domain = email.slice(atIdx + 1).toLowerCase();
+    for (const known of knownDomains) {
+      if (known.startsWith(domain) && known !== domain && domain.length >= 4) {
+        return email.slice(0, atIdx + 1) + known;
+      }
+    }
+    return null;
+  }
+
+  emailInput.addEventListener('input', () => {
+    const val = emailInput.value.trim();
+    const basicValid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val);
+    const suggestion = suggestDomain(val);
+
+    if (val.length === 0) {
+      emailInput.classList.remove('invalid', 'valid');
+      emailError.classList.remove('show');
+      emailError.textContent = 'Adresse e-mail invalide';
+    } else if (suggestion) {
+      emailInput.classList.add('invalid');
+      emailInput.classList.remove('valid');
+      emailError.textContent = 'Vouliez-vous dire ' + suggestion + ' ?';
+      emailError.classList.add('show');
+      emailError.style.cursor = 'pointer';
+      emailError.onclick = () => {
+        emailInput.value = suggestion;
+        emailInput.classList.add('valid');
+        emailInput.classList.remove('invalid');
+        emailError.classList.remove('show');
+      };
+    } else if (basicValid) {
+      emailInput.classList.add('valid');
+      emailInput.classList.remove('invalid');
+      emailError.classList.remove('show');
+    } else {
+      emailInput.classList.add('invalid');
+      emailInput.classList.remove('valid');
+      emailError.textContent = 'Adresse e-mail invalide';
+      emailError.classList.add('show');
+    }
+  });
+
+  // ── ADDRESS AUTOCOMPLETE (API Gouvernement FR) ──
+  const adresseInput = document.getElementById('adresse');
+  const adresseList  = document.getElementById('adresse-list');
+  const cpInput      = document.getElementById('cp');
+  const villeInput   = document.getElementById('ville');
+  let debounceTimer;
+
+  adresseInput.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    const q = adresseInput.value.trim();
+    if (q.length < 3) { adresseList.style.display = 'none'; return; }
+
+    debounceTimer = setTimeout(async () => {
+      try {
+        const res = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(q)}&limit=5`);
+        const data = await res.json();
+        adresseList.innerHTML = '';
+        if (!data.features || data.features.length === 0) {
+          adresseList.style.display = 'none';
+          return;
+        }
+        data.features.forEach(f => {
+          const item = document.createElement('div');
+          item.className = 'autocomplete-item';
+          const label = f.properties.label;
+          const cp    = f.properties.postcode || '';
+          const city  = f.properties.city || '';
+          item.innerHTML = `<strong>${f.properties.name}</strong> — ${city} ${cp}`;
+          item.addEventListener('click', () => {
+            adresseInput.value = f.properties.name + (f.properties.housenumber ? '' : '');
+            // Use full label minus city/postcode for street
+            adresseInput.value = label.replace(`, ${cp} ${city}`, '').replace(`, ${city}`, '');
+            cpInput.value    = cp;
+            villeInput.value = city;
+            adresseList.style.display = 'none';
+          });
+          adresseList.appendChild(item);
+        });
+        adresseList.style.display = 'block';
+      } catch(e) {
+        adresseList.style.display = 'none';
+      }
+    }, 300);
+  });
+
+  document.addEventListener('click', e => {
+    if (!adresseInput.contains(e.target)) adresseList.style.display = 'none';
+  });
+
+  // ── CAROUSEL ──
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const sac   = carousel.dataset.sac;
+    const total = parseInt(carousel.dataset.total);
+    const track = carousel.querySelector('.carousel-track');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    let current = 0;
+
+    // Build slides
+    for (let i = 1; i <= total; i++) {
+      const slide = document.createElement('div');
+      slide.className = 'carousel-slide';
+      const img = document.createElement('img');
+      img.src = `sac${sac}-${i}.jpg`;
+      img.alt = `Vue ${i}`;
+      img.onerror = function() {
+        this.style.display = 'none';
+        const ph = document.createElement('div');
+        ph.className = 'product-placeholder';
+        ph.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.2" stroke="var(--rose)"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>📸 sac${sac}-${i}.jpg`;
+        slide.appendChild(ph);
+      };
+      slide.appendChild(img);
+      track.appendChild(slide);
+
+      // Dot
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 1 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i - 1));
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    carousel.querySelector('.prev').addEventListener('click', () => goTo(current - 1));
+    carousel.querySelector('.next').addEventListener('click', () => goTo(current + 1));
+
+    // Swipe support mobile
+    let startX = 0;
+    carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    carousel.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
+  });
+
+  // ── INDICATIF CUSTOM ──
+  const indicatifSelect = document.getElementById('indicatif');
+  const phoneInput = document.getElementById('phone');
+  const customWrap = document.getElementById('custom-indicatif-wrap');
+  const customInput = document.getElementById('custom-indicatif');
+
+  const phonePlaceholders = {
+    '+33':'06 12 34 56 78','+32':'04 71 23 45 67','+41':'076 123 45 67',
+    '+352':'621 123 456','+1':'555 123 4567','+44':'07911 123456',
+    '+49':'0151 12345678','+34':'612 345 678','+39':'320 123 4567',
+    '+351':'912 345 678','+31':'06 12345678',
+    
+    
+    
+    '+228':'90 12 34 56',
+    
+    
+    
+  };
+
+  indicatifSelect.addEventListener('change', () => {
+    const val = indicatifSelect.value;
+    phoneInput.placeholder = phonePlaceholders[val] || 'Votre numéro';
+    if (val === 'autre') {
+      customWrap.style.display = 'block';
+      customInput.required = true;
+    } else {
+      customWrap.style.display = 'none';
+      customInput.required = false;
+      customInput.value = '';
+    }
+    checkFormReady();
+  });
+
+  // ── QUANTITÉ + TOTAL ──
+  const produitSelect = document.getElementById('produit');
+  const quantiteSelect = document.getElementById('quantite');
+  const totalWrap = document.getElementById('total-wrap');
+  const totalDisplay = document.getElementById('total-display');
+  const totalHidden = document.getElementById('total-hidden');
+  const PRICE = 34.99;
+
+  function updateTotal() {
+    const qty = parseInt(quantiteSelect.value);
+    if (produitSelect.value && qty) {
+      const total = (PRICE * qty).toFixed(2).replace('.', ',');
+      totalDisplay.textContent = total + ' €';
+      totalHidden.value = total + ' € (' + qty + ' x 34,99 €)';
+      totalWrap.style.display = 'block';
+    } else {
+      totalWrap.style.display = 'none';
+      totalHidden.value = '';
+    }
+    checkFormReady();
+  }
+
+  produitSelect.addEventListener('change', updateTotal);
+  quantiteSelect.addEventListener('change', updateTotal);
+
+  // ── NUMÉRO DE COMMANDE ──
+  function genOrderNum() {
+    const now = new Date();
+    const date = now.getFullYear().toString() +
+      String(now.getMonth()+1).padStart(2,'0') +
+      String(now.getDate()).padStart(2,'0');
+    const rand = Math.floor(1000 + Math.random() * 9000);
+    return 'AML-' + date + '-' + rand;
+  }
+  document.getElementById('numero_commande').value = genOrderNum();
+
+  // ── FAQ ──
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── SCROLL ANIMATIONS ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in, .product-card').forEach((el, i) => {
+    if (el.classList.contains('product-card')) {
+      el.style.transitionDelay = (i % 3) * 0.12 + 's';
+    }
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
