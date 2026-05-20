@@ -21,8 +21,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      overflow-y: auto;
       position: relative;
+      padding: 2rem 1rem;
     }
     .blob { position: fixed; border-radius: 50%; background: rgba(255,255,255,0.04); animation: blobPulse ease-in-out infinite alternate; }
     .blob-1 { width: 500px; height: 500px; top: -150px; right: -150px; animation-duration: 6s; }
@@ -87,6 +88,15 @@
     .countdown-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
 
     @keyframes fadeUp { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      .card { padding: 2rem 1.5rem; }
+      h1 { font-size: 2rem; }
+      .check-ring { width: 80px; height: 80px; margin-bottom: 1.5rem; }
+      .check-icon { font-size: 2rem; }
+      .socials { flex-direction: column; gap: 0.75rem; align-items: center; }
+      .countdown-wrap { margin-top: 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -99,7 +109,7 @@
     <h1>Commande reçue !<em>merci à toi 💕</em></h1>
     <div class="divider"><span class="divider-line"></span><span class="divider-icon">✦</span><span class="divider-line"></span></div>
     <p class="message">Ta commande a bien été enregistrée 🌸<br>On te recontacte très vite sur Snapchat<br>pour confirmer et finaliser ton paiement.</p>
-    <div class="snap-tag">👻 <span>stany75o</span></div>
+    <div class="snap-tag">👻 <span>amlshop60</span></div>
     <div class="socials">
       <a href="https://instagram.com/stvnys_law" target="_blank" class="social-btn">📸 Instagram</a>
       <a href="https://tiktok.com/@aml_shop60" target="_blank" class="social-btn">🎵 TikTok</a>
