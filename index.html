@@ -6,7 +6,7 @@
   <title>AML Shop — Mini Sac Bandoulière Rowan | Maroquinerie</title>
   <meta name="description" content="Découvrez AML Shop, votre boutique de maroquinerie tendance. Mini sac bandoulière Rowan disponible en 6 couleurs à 34,99€. Livraison France. Commandez facilement !">
   <meta property="og:title" content="AML Shop — Mini Sac Bandoulière Rowan">
-  <meta property="og:description" content="plusieurs coloris tendance à 34,99€. Commandez facilement, paiement PayPal.">
+  <meta property="og:description" content="6 coloris tendance à 34,99€. Commandez facilement, paiement PayPal.">
   <meta name="theme-color" content="#8c3356">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
@@ -30,24 +30,20 @@
       background: var(--white);
       color: var(--text);
       overflow-x: hidden;
-      max-width: 100vw;
     }
-    html { overflow-x: hidden; max-width: 100%; }
 
     /* ── NAV ── */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(40px) saturate(200%) brightness(1.1);
-      -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.1);
+      background: rgba(253, 240, 245, 0.96);
+      backdrop-filter: blur(12px);
       padding: 0.9rem 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.5);
-      box-shadow: 0 4px 30px rgba(140,51,86,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+      border-bottom: 1px solid var(--pink-light);
     }
 
     .nav-logo {
@@ -216,14 +212,14 @@
 
     /* ── PRODUCTS ── */
     .products {
-      padding: 4rem 2rem;
+      padding: 7rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 4rem;
     }
 
     .section-label {
@@ -320,7 +316,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: var(--rose-dark);
+      background: rgba(255,255,255,0.85);
       border: none;
       width: 32px;
       height: 32px;
@@ -331,12 +327,12 @@
       justify-content: center;
       z-index: 2;
       transition: background 0.2s;
-      color: white;
+      color: var(--rose-dark);
       font-size: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .carousel-btn:hover { background: var(--rose-hot); }
+    .carousel-btn:hover { background: white; }
     .carousel-btn.prev { left: 8px; }
     .carousel-btn.next { right: 8px; }
 
@@ -430,7 +426,7 @@
     /* ── ORDER FORM ── */
     .order-section {
       background: var(--pink-pale);
-      padding: 4rem 2rem;
+      padding: 7rem 2rem;
     }
 
     .order-container {
@@ -684,7 +680,7 @@
     /* ── AVIS CLIENTS ── */
     .reviews {
       background: var(--pink-pale);
-      padding: 4rem 2rem;
+      padding: 6rem 2rem;
     }
     .reviews-grid {
       display: grid;
@@ -704,7 +700,7 @@
     .review-date { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; }
 
     /* ── FAQ ── */
-    .faq { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
+    .faq { padding: 6rem 2rem; max-width: 800px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--pink-light); }
     .faq-question {
       width: 100%;
@@ -739,210 +735,6 @@
       .review-card { padding: 1.1rem; }
     }
 
-
-
-    /* ── BANNIÈRE DÉFILANTE ── */
-    .ticker-wrap {
-      background: var(--rose-dark);
-      padding: 0.6rem 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .ticker {
-      display: inline-block;
-      animation: ticker 20s linear infinite;
-      color: rgba(255,255,255,0.9);
-      font-family: 'Jost', sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-    .ticker span { margin: 0 2.5rem; }
-    .ticker span::before { content: '✦'; margin-right: 2.5rem; color: var(--rose-hot); }
-    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-
-    @media (max-width: 768px) {
-      .ticker-wrap { padding: 0.3rem 0; }
-      .ticker { font-size: 0.55rem; letter-spacing: 0.05em; }
-      .ticker span { margin: 0 1rem; }
-      .ticker span::before { margin-right: 1rem; }
-    }
-
-    /* ── BOUTON FLOTTANT MOBILE ── */
-    .mobile-cta {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 500;
-      background: var(--rose-dark);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-top: 2px solid var(--rose-hot);
-    }
-    @media (max-width: 768px) { .mobile-cta { display: block; } }
-
-    /* ── COUP DE CŒUR ── */
-    .heart-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(255,255,255,0.9);
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 3;
-      transition: transform 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .heart-btn:hover { transform: scale(1.15); }
-    .heart-btn.liked { animation: heartPop 0.4s cubic-bezier(0.34,1.56,0.64,1); }
-    @keyframes heartPop {
-      0%   { transform: scale(1); }
-      50%  { transform: scale(1.4); }
-      100% { transform: scale(1); }
-    }
-    .heart-float {
-      position: absolute;
-      font-size: 1.5rem;
-      pointer-events: none;
-      animation: floatHeart 1s ease forwards;
-      z-index: 4;
-    }
-    @keyframes floatHeart {
-      0%   { opacity: 1; transform: translateY(0) scale(1); }
-      100% { opacity: 0; transform: translateY(-60px) scale(1.3); }
-    }
-
-    /* ── LIGHTBOX ── */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .lightbox.open {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .lightbox img {
-      max-width: 520px;
-      max-height: 600px;
-      width: 90vw;
-      object-fit: contain;
-      border-radius: 4px;
-      transform: scale(0.85);
-      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    }
-    .lightbox.open img { transform: scale(1); }
-    .lightbox-close {
-      position: absolute;
-      top: 1.2rem; right: 1.5rem;
-      background: none; border: none;
-      color: white; font-size: 2rem;
-      cursor: pointer; opacity: 0.7;
-      transition: opacity 0.2s, transform 0.2s;
-      line-height: 1;
-    }
-    .lightbox-close:hover { opacity: 1; transform: rotate(90deg); }
-    .lightbox-nav {
-      position: absolute;
-      top: 50%; transform: translateY(-50%);
-      background: rgba(255,255,255,0.15);
-      border: none; color: white;
-      width: 44px; height: 44px;
-      border-radius: 50%; font-size: 1.4rem;
-      cursor: pointer; transition: background 0.2s;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
-    .lightbox-nav.prev { left: 1rem; }
-    .lightbox-nav.next { right: 1rem; }
-    .lightbox-counter {
-      position: absolute;
-      bottom: 1.2rem; left: 50%;
-      transform: translateX(-50%);
-      color: rgba(255,255,255,0.6);
-      font-family: 'Jost', sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-    }
-
-    /* ── SECTION PROGRESS ── */
-    .scroll-progress {
-      position: fixed;
-      top: 0; left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--rose-dark), var(--rose-hot));
-      z-index: 200;
-      width: 0%;
-      transition: width 0.1s linear;
-    }
-
-    /* ── SECTION FADE ENHANCED ── */
-    .section-fade {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .section-fade.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Cursor pointer on carousel images */
-    .carousel-slide img { cursor: zoom-in; }
-
-
-    /* ── RETOUR EN HAUT ── */
-    .back-to-top {
-      position: fixed;
-      bottom: 5rem;
-      right: 1.5rem;
-      z-index: 998;
-      background: var(--rose-dark);
-      color: white;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: none;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.3s, transform 0.3s, background 0.2s;
-      box-shadow: 0 4px 16px rgba(140,51,86,0.3);
-    }
-    .back-to-top.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .back-to-top:hover { background: var(--rose-hot); }
-
     /* ── SCROLL ANIMATIONS ── */
     .fade-in {
       opacity: 0;
@@ -954,18 +746,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      nav {
-        padding: 0.5rem 0.75rem;
-        background: rgba(255,255,255,0.18);
-        backdrop-filter: blur(40px) saturate(200%) brightness(1.1);
-        -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.1);
-        box-shadow: 0 4px 30px rgba(140,51,86,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
-        border-bottom: 1px solid rgba(255,255,255,0.5);
-      }
-      .nav-links { display: flex; gap: 0.5rem; flex-wrap: nowrap; }
-      .nav-links a { font-size: 0.6rem; letter-spacing: 0.03em; white-space: nowrap; }
-      .nav-logo img { width: 28px; height: 28px; }
-      .nav-brand { font-size: 1rem; }
+      .nav-links { display: none; }
+      nav { padding: 0.8rem 1.25rem; }
       .form-row { grid-template-columns: 1fr; }
       .order-form { padding: 2rem 1.5rem; }
       .hero-cta { flex-direction: column; align-items: center; }
@@ -976,35 +758,18 @@
       .product-info { padding: 0.85rem; }
       .product-name { font-size: 1rem; }
       .product-desc-list { display: none; }
-      .product-price { font-size: 1rem; }
-      .btn-order { padding: 0.45rem 0.65rem; font-size: 0.65rem; letter-spacing: 0.05em; }
-      .product-footer { gap: 0.25rem; align-items: center; }
+      .product-price { font-size: 1.2rem; }
+      .btn-order { padding: 0.5rem 0.85rem; font-size: 0.7rem; }
       .carousel-btn { width: 24px; height: 24px; font-size: 0.85rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- BANNIÈRE DÉFILANTE -->
-<div class="ticker-wrap">
-  <div class="ticker">
-    <span>Livraison rapide</span>
-    <span>Paiement sécurisé PayPal</span>
-    <span>Contactez-nous sur Snap · amlshop60</span>
-    <span>Plusieurs coloris disponibles</span>
-    <span>Mini sac bandoulière Rowan</span>
-    <span>Livraison rapide</span>
-    <span>Paiement sécurisé PayPal</span>
-    <span>Contactez-nous sur Snap · amlshop60</span>
-    <span>Plusieurs coloris disponibles</span>
-    <span>Mini sac bandoulière Rowan</span>
-  </div>
-</div>
-
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="logo.jpg" alt="AML Shop">
+    <img src="logo aml shop.jpg" alt="AML Shop">
     <span class="nav-brand">AML Shop</span>
   </a>
   <ul class="nav-links">
@@ -1019,7 +784,7 @@
 <section class="hero">
   <div class="hero-blob-1"></div>
   <div class="hero-blob-2"></div>
-  <img src="logo.jpg" alt="AML Shop" class="hero-logo">
+  <img src="logo aml shop.jpg" alt="AML Shop" class="hero-logo">
   <div class="hero-text">
     <h1>AML<span class="script">shop</span></h1>
     <p class="hero-tagline">Élégance &amp; Style · Maroquinerie</p>
@@ -1041,13 +806,12 @@
 
     <!-- Sac 1 — Noir -->
     <div class="product-card">
-      <div style="position:relative"><button class="heart-btn" data-liked="false">🤍</button>
       <div class="carousel" data-sac="1" data-total="5">
         <div class="carousel-track"></div>
         <button class="carousel-btn prev">&#8249;</button>
         <button class="carousel-btn next">&#8250;</button>
         <div class="carousel-dots"></div>
-      </div></div>
+      </div>
       <div class="product-info">
         <h3 class="product-name">Mini sac bandoulière Rowan — Noir</h3>
         <ul class="product-desc-list">
@@ -1066,13 +830,12 @@
 
     <!-- Sac 2 — Bleu -->
     <div class="product-card">
-      <div style="position:relative"><button class="heart-btn" data-liked="false">🤍</button>
       <div class="carousel" data-sac="2" data-total="5">
         <div class="carousel-track"></div>
         <button class="carousel-btn prev">&#8249;</button>
         <button class="carousel-btn next">&#8250;</button>
         <div class="carousel-dots"></div>
-      </div></div>
+      </div>
       <div class="product-info">
         <h3 class="product-name">Mini sac bandoulière Rowan — Bleu</h3>
         <ul class="product-desc-list">
@@ -1091,13 +854,12 @@
 
     <!-- Sac 3 — Rose -->
     <div class="product-card">
-      <div style="position:relative"><button class="heart-btn" data-liked="false">🤍</button>
       <div class="carousel" data-sac="3" data-total="5">
         <div class="carousel-track"></div>
         <button class="carousel-btn prev">&#8249;</button>
         <button class="carousel-btn next">&#8250;</button>
         <div class="carousel-dots"></div>
-      </div></div>
+      </div>
       <div class="product-info">
         <h3 class="product-name">Mini sac bandoulière Rowan — Rose</h3>
         <ul class="product-desc-list">
@@ -1116,13 +878,12 @@
 
     <!-- Sac 4 — Marron -->
     <div class="product-card">
-      <div style="position:relative"><button class="heart-btn" data-liked="false">🤍</button>
       <div class="carousel" data-sac="4" data-total="5">
         <div class="carousel-track"></div>
         <button class="carousel-btn prev">&#8249;</button>
         <button class="carousel-btn next">&#8250;</button>
         <div class="carousel-dots"></div>
-      </div></div>
+      </div>
       <div class="product-info">
         <h3 class="product-name">Mini sac bandoulière Rowan — Marron</h3>
         <ul class="product-desc-list">
@@ -1139,17 +900,16 @@
       </div>
     </div>
 
-    <!-- Sac 5 — Jaune dorée -->
+    <!-- Sac 5 — Beige -->
     <div class="product-card">
-      <div style="position:relative"><button class="heart-btn" data-liked="false">🤍</button>
       <div class="carousel" data-sac="5" data-total="5">
         <div class="carousel-track"></div>
         <button class="carousel-btn prev">&#8249;</button>
         <button class="carousel-btn next">&#8250;</button>
         <div class="carousel-dots"></div>
-      </div></div>
+      </div>
       <div class="product-info">
-        <h3 class="product-name">Mini sac bandoulière Rowan — Jaune dorée</h3>
+        <h3 class="product-name">Mini sac bandoulière Rowan — Beige</h3>
         <ul class="product-desc-list">
           <li>Toile enduite imprimée de l'emblématique logo Coach</li>
           <li>Bordure partiellement fabriquée avec une couche de fibres de cuir recyclé</li>
@@ -1166,13 +926,12 @@
 
     <!-- Sac 6 — Bleu Jean -->
     <div class="product-card">
-      <div style="position:relative"><button class="heart-btn" data-liked="false">🤍</button>
       <div class="carousel" data-sac="6" data-total="5">
         <div class="carousel-track"></div>
         <button class="carousel-btn prev">&#8249;</button>
         <button class="carousel-btn next">&#8250;</button>
         <div class="carousel-dots"></div>
-      </div></div>
+      </div>
       <div class="product-info">
         <h3 class="product-name">Mini sac bandoulière Rowan — Bleu Jean</h3>
         <ul class="product-desc-list">
@@ -1202,32 +961,26 @@
     <div class="review-card fade-in">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">"Sac reçu en quelques jours, exactement comme sur les photos. La qualité est vraiment au rendez-vous pour ce prix. Je recommande !"</p>
-      <div class="review-author">Tania A.</div>
-      <div class="review-date">Paris 75013 · Avril 2026</div>
+      <div class="review-author">Inès M.</div>
+      <div class="review-date">Paris · Avril 2026</div>
     </div>
     <div class="review-card fade-in">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"J'ai pris le coloris rose et il est magnifique ! La vendeuse a été très réactive sur Snap. Super expérience, je reviendrai."</p>
-      <div class="review-author">Steffie D.</div>
-      <div class="review-date">Beauvais · Mars 2026</div>
+      <p class="review-text">"J'ai pris le coloris rose et il est magnifique ! Le vendeur a été très réactif sur Snap. Super expérience, je reviendrai."</p>
+      <div class="review-author">Chloé D.</div>
+      <div class="review-date">Lyon · Mars 2026</div>
     </div>
     <div class="review-card fade-in">
       <div class="review-stars">★★★★☆</div>
-      <p class="review-text">"Très joli sac, bandoulière bien pratique. Le paiement par PayPal en bien . Livraison un peu longue mais ça valait l'attente."</p>
-      <div class="review-author">Joyce K.</div>
+      <p class="review-text">"Très joli sac, bandoulière bien pratique. Le paiement par PayPal c'est rassurant. Livraison un peu longue mais ça valait l'attente."</p>
+      <div class="review-author">Fatou K.</div>
       <div class="review-date">Bordeaux · Avril 2026</div>
     </div>
     <div class="review-card fade-in">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">"Le sac noir est parfait pour tous les jours. Très classe, plusieurs compliments reçus. Commande fluide et contact sympa !"</p>
-      <div class="review-author">Louise Z.</div>
-      <div class="review-date">Italie · Mai 2026</div>
-    </div>
-	<div class="review-card fade-in">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"J'ai pris le petit sac bleu idéal pour l'été . Très bon rapport qualité prix "</p>
-      <div class="review-author">Mabena M.</div>
-      <div class="review-date">Beauvais · Mai 2026</div>
+      <div class="review-author">Léa T.</div>
+      <div class="review-date">Marseille · Mai 2026</div>
     </div>
   </div>
 </section>
@@ -1240,7 +993,7 @@
       <h2 class="section-title">Commander</h2>
     </div>
 
-    <form class="order-form fade-in" id="order-form" action="https://api.web3forms.com/submit" method="POST">
+    <form class="order-form fade-in" id="order-form">
       <input type="hidden" name="access_key" value="804520a1-6af0-4d9e-8cfa-9e25a0087876">
       <input type="hidden" name="numero_commande" id="numero_commande">
       <input type="hidden" name="subject" id="email-subject" value="Nouvelle commande AML Shop 🎀">
@@ -1250,7 +1003,7 @@
       <div class="form-row">
         <div class="form-group">
           <label for="prenom">Prénom *</label>
-          <input type="text" id="prenom" name="prenom" placeholder="Hadassa" required>
+          <input type="text" id="prenom" name="prenom" placeholder="Louise" required>
         </div>
         <div class="form-group">
           <label for="nom">Nom *</label>
@@ -1260,7 +1013,7 @@
 
       <div class="form-group">
         <label for="email">Adresse e-mail *</label>
-        <input type="email" id="email" name="email" placeholder="Hadassa@exemple.com" required>
+        <input type="email" id="email" name="email" placeholder="louise@exemple.fr" required>
         <span class="field-error" id="email-error">Adresse e-mail invalide</span>
       </div>
 
@@ -1332,7 +1085,7 @@
       <div class="form-row">
         <div class="form-group">
           <label for="cp">Code postal *</label>
-          <input type="text" id="cp" name="code_postal" placeholder="75013" required>
+          <input type="text" id="cp" name="code_postal" placeholder="75001" required>
         </div>
         <div class="form-group">
           <label for="ville">Ville *</label>
@@ -1349,7 +1102,7 @@
             <option value="Rowan Bleu">Mini sac bandoulière Rowan — Bleu</option>
             <option value="Rowan Rose">Mini sac bandoulière Rowan — Rose</option>
             <option value="Rowan Marron">Mini sac bandoulière Rowan — Marron</option>
-            <option value="Rowan Beige">Mini sac bandoulière Rowan — Jaune dorée</option>
+            <option value="Rowan Beige">Mini sac bandoulière Rowan — Beige</option>
             <option value="Rowan Bleu Jean">Mini sac bandoulière Rowan — Bleu Jean</option>
           </select>
         </div>
@@ -1388,7 +1141,7 @@
 
       <div class="payment-info">
         <strong>📦 Comment ça marche ?</strong><br>
-        Après réception de votre commande, nous vous recontacterons sur Snapchat (<strong>amlshop60</strong>) ou via le réseau social que vous utilisez le plus — pensez à le mentionner dans le champ message. Le paiement s'effectue par <strong>PayPal</strong>. Délai de livraison variable selon le transporteur et votre position géographique.
+        Après réception de votre commande, nous vous recontacterons sur Snapchat (<strong>stany75o</strong>) ou via le réseau social que vous utilisez le plus — pensez à le mentionner dans le champ message. Le paiement s'effectue par <strong>PayPal</strong>. Délai de livraison variable selon le transporteur et votre position géographique.
       </div>
 
     </form>
@@ -1404,7 +1157,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question">Comment passer une commande ?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Remplissez le formulaire de commande avec vos informations et choisissez votre sac. On vous recontacte ensuite sur Snapchat (amlshop60) pour finaliser la commande et le paiement et décider du moyen de livraison </div>
+      <div class="faq-answer">Remplissez le formulaire de commande avec vos informations et choisissez votre sac. On vous recontacte ensuite sur Snapchat (stany75o) pour finaliser la commande et le paiement.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question">Quel est le moyen de paiement ?<span class="faq-icon">+</span></button>
@@ -1412,11 +1165,11 @@
     </div>
     <div class="faq-item">
       <button class="faq-question">Quels sont les délais de livraison ?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Les délais varient selon le transporteur de votre choix et votre position géographique. Comptez généralement entre 3 et 10 jours ouvrés après confirmation du paiement.</div>
+      <div class="faq-answer">Les délais varient selon le transporteur et votre position géographique. Comptez généralement entre 3 et 10 jours ouvrés après confirmation du paiement.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question">Puis-je retourner un article ?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">En cas de problème avec votre commande, contactez-nous directement sur Snapchat (amlshop60). Nous trouverons une solution ensemble.</div>
+      <div class="faq-answer">En cas de problème avec votre commande, contactez-nous directement sur Snapchat (stany75o) ou Instagram (stvnys_law). Nous trouverons une solution ensemble.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question">Livrez-vous en dehors de France ?<span class="faq-icon">+</span></button>
@@ -1426,16 +1179,9 @@
 </section>
 
 <!-- WHATSAPP FLOTTANT -->
-<!-- Remplace 33600000000 par ton numéro ex: 33612345678 -->
-<a href="https://wa.me/33614421408?text=Bonjour%20AML%20Shop%20!" class="whatsapp-btn" target="_blank" title="Nous contacter sur WhatsApp">
+<a href="https://wa.me/33600000000?text=Bonjour%20AML%20Shop%20!" class="whatsapp-btn" target="_blank" title="Nous contacter sur WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-
-<!-- RETOUR EN HAUT -->
-<button class="back-to-top" id="back-to-top" title="Retour en haut">↑</button>
-
-<!-- BOUTON MOBILE FLOTTANT -->
-<a href="#commander" class="mobile-cta">🛍️ Commander maintenant</a>
 
 <!-- FOOTER -->
 <footer id="contact">
@@ -1444,25 +1190,13 @@
   <div class="footer-links">
     <a href="#sacs">Nos Sacs</a>
     <a href="#commander">Commander</a>
-   <!-- <a href="https://instagram.com/stvnys_law" target="_blank">Instagram</a>-->
-    <a href="https://snapchat.com/add/amlshop60" target="_blank">Snapchat</a>
-    <a href="https://tiktok.com/@aml_shop60" target="_blank">TikTok</a>
+    <a href="https://instagram.com/stvnys_law" target="_blank">Instagram</a>
+    <a href="https://snapchat.com/add/stany75o" target="_blank">Snapchat</a>
+    <a href="https://tiktok.com/@stanyslaw_75o" target="_blank">TikTok</a>
   </div>
   <div class="footer-divider"></div>
   <p class="footer-copy">© 2026 AML Shop · Tous droits réservés</p>
 </footer>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lb-close">✕</button>
-  <button class="lightbox-nav prev" id="lb-prev">&#8249;</button>
-  <img src="" id="lb-img" alt="">
-  <button class="lightbox-nav next" id="lb-next">&#8250;</button>
-  <div class="lightbox-counter" id="lb-counter"></div>
-</div>
-
-<!-- SCROLL PROGRESS -->
-<div class="scroll-progress" id="scroll-progress"></div>
 
 <script>
   const orderForm = document.getElementById('order-form');
@@ -1472,28 +1206,17 @@
     e.preventDefault();
     submitBtn.textContent = 'Envoi en cours...';
     submitBtn.disabled = true;
-
+    const formData = new FormData(orderForm);
+    const data = Object.fromEntries(formData.entries());
+    const payload1 = { ...data, access_key: '804520a1-6af0-4d9e-8cfa-9e25a0087876' };
+    const payload2 = { ...data, access_key: 'a7aeaee9-7fdf-4499-8327-116b90609f51' };
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: new FormData(orderForm),
-        headers: { 'Accept': 'application/json' }
-      });
-      const data = await res.json();
-      if (data.success) {
-        window.location.href = 'merci.html';
-      } else {
-        submitBtn.textContent = 'Envoyer ma commande';
-        submitBtn.classList.add('ready');
-        submitBtn.disabled = false;
-        alert('Une erreur est survenue, veuillez réessayer.');
-      }
-    } catch(err) {
-      submitBtn.textContent = 'Envoyer ma commande';
-      submitBtn.classList.add('ready');
-      submitBtn.disabled = false;
-      alert('Pas de connexion internet, veuillez réessayer.');
-    }
+      await Promise.all([
+        fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload1) }),
+        fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload2) })
+      ]);
+    } catch(err) { console.error('Erreur envoi:', err); }
+    window.location.href = 'https://amlshop.netlify.app/merci.html';
   });
 
   // ── BUTTON STATE ──
@@ -1648,10 +1371,6 @@
         ph.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.2" stroke="var(--rose)"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>📸 sac${sac}-${i}.jpg`;
         slide.appendChild(ph);
       };
-      img.addEventListener('click', () => {
-        const allImgs = Array.from(track.querySelectorAll('img')).filter(i => i.style.display !== 'none' && i.complete && i.naturalWidth > 0).map(i => i.src);
-        if (allImgs.length > 0) openLightbox(allImgs, Math.min(current, allImgs.length - 1));
-      });
       slide.appendChild(img);
       track.appendChild(slide);
 
@@ -1693,13 +1412,7 @@
     '+352':'621 123 456','+1':'555 123 4567','+44':'07911 123456',
     '+49':'0151 12345678','+34':'612 345 678','+39':'320 123 4567',
     '+351':'912 345 678','+31':'06 12345678',
-    
-    
-    
     '+228':'90 12 34 56',
-    
-    
-    
   };
 
   indicatifSelect.addEventListener('change', () => {
@@ -1752,76 +1465,6 @@
   }
   document.getElementById('numero_commande').value = genOrderNum();
 
-  // ── SCROLL PROGRESS ──
-  const progressBar = document.getElementById('scroll-progress');
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const total = document.documentElement.scrollHeight - window.innerHeight;
-    progressBar.style.width = (scrolled / total * 100) + '%';
-  });
-
-  // ── LIGHTBOX ──
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lb-img');
-  const lbClose = document.getElementById('lb-close');
-  const lbPrev = document.getElementById('lb-prev');
-  const lbNext = document.getElementById('lb-next');
-  const lbCounter = document.getElementById('lb-counter');
-  let lbImages = [];
-  let lbIndex = 0;
-
-  function openLightbox(images, index) {
-    lbImages = images;
-    lbIndex = index;
-    lbImg.src = lbImages[lbIndex];
-    lbCounter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function lbGoTo(dir) {
-    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
-    lbImg.src = lbImages[lbIndex];
-    lbCounter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
-  }
-
-  lbClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-  lbPrev.addEventListener('click', () => lbGoTo(-1));
-  lbNext.addEventListener('click', () => lbGoTo(1));
-  document.addEventListener('keydown', e => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') lbGoTo(-1);
-    if (e.key === 'ArrowRight') lbGoTo(1);
-  });
-
-  // ── COUP DE CŒUR ──
-  document.querySelectorAll('.heart-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const liked = btn.dataset.liked === 'true';
-      btn.dataset.liked = !liked;
-      btn.textContent = liked ? '🤍' : '❤️';
-      btn.classList.add('liked');
-      setTimeout(() => btn.classList.remove('liked'), 400);
-
-      if (!liked) {
-        const float = document.createElement('div');
-        float.className = 'heart-float';
-        float.textContent = '❤️';
-        const rect = btn.getBoundingClientRect();
-        float.style.cssText = `position:fixed;left:${rect.left}px;top:${rect.top}px;`;
-        document.body.appendChild(float);
-        setTimeout(() => float.remove(), 1000);
-      }
-    });
-  });
-
   // ── FAQ ──
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1830,19 +1473,6 @@
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     });
-  });
-
-  // ── RETOUR EN HAUT ──
-  const backToTop = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      backToTop.classList.add('visible');
-    } else {
-      backToTop.classList.remove('visible');
-    }
-  });
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // ── SCROLL ANIMATIONS ──
